@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
+// when the app starts
     @Override
     protected void onStart() {
         super.onStart();
@@ -32,25 +32,25 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Start Method", Toast.LENGTH_SHORT).show();
         btn.setVisibility(View.VISIBLE);
     }
-
+// when app resumes from background
     @Override
     protected void onResume() {
         super.onResume();
         Toast.makeText(this, "Resume Method", Toast.LENGTH_SHORT).show();
     }
-
+// when app goes into background
     @Override
     protected void onPause() {
         super.onPause();
         Toast.makeText(this, "Pause Method", Toast.LENGTH_SHORT).show();
     }
-
+// when the app stops working for some reasons
     @Override
     protected void onStop() {
         super.onStop();
         Toast.makeText(this, "Stop Method", Toast.LENGTH_SHORT).show();
     }
-
+// when the app is killed after using or from background to free up ROM
     @Override
     protected void onDestroy() {
         super.onDestroy();
